@@ -1,5 +1,5 @@
 import '@/styles/globals.css'
-import styles from '@/styles/loading.module.css'
+import styles from '@/styles/Loading.module.css'
 import Layout from '@/components/layout/Layout'
 import {useEffect, useState} from 'react'
 import Landing from '@/components/landing/Landing'
