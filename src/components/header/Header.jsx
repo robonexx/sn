@@ -1,8 +1,7 @@
 import Image from 'next/image'
 import styles from '../header/Header.module.css'
-import logoVit from '../../../public/images/skelleftea_logo_svart.png'
-
-import iconEllipse from '../../../public/images/profilePic.png'
+import logoVit from '/public/images/skelleftea_logo_svart.png'
+import iconEllipse from '/public/images/profilePic.png'
 import Link from 'next/link'
 import { RiNotification4Fill } from 'react-icons/ri'
 
