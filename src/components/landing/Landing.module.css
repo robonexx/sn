@@ -25,6 +25,8 @@
   max-height: 500px;
   justify-content: center;
   position: absolute;
+  left: 50%;
+  transform: translate(-50%);
   bottom: 4rem;
   z-index: 1002;
   text-transform: uppercase;
@@ -32,6 +34,12 @@
   padding: 0 3rem;
   gap: 1rem;
   text-shadow: 2px 3px 3px rgba(0, 0, 0, 0.325);
+}
+
+@media (min-width: 768px) {
+  .content {
+    width: 40%;
+  }
 }
 
 .content > p {
@@ -103,4 +111,27 @@
   left: -50px;
   z-index: 1001;
   transform: scale(0.9);
+}
+
+/* change here if you want to make responsive for desktop / tablet etc */
+@media (min-width: 768px) {
+
+  .main {
+    display: grid;
+    place-content: center;
+  }
+
+  .content {
+    width: 40%;
+   
+  }
+
+  .circles {
+    position: relative;
+    margin: 0 auto;
+    top: -40%;
+    z-index: 1001;
+    transform: scale(0.9);
+  }
+  
 }
