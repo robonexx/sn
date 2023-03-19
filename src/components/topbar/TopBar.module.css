@@ -1,0 +1,17 @@
+.topbar {
+    position: relative;
+    margin-top: 5.5rem;
+    height: 5.5rem;
+    z-index: 100;
+    background-color: #9EB45A;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.topbar  h3 {
+    padding: 0 0.5rem;
+    font-size: 1.25rem;
+    text-transform: uppercase;
+    letter-spacing: -1%;
+}

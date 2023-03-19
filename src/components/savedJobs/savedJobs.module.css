@@ -1,0 +1,54 @@
+.info{
+  margin: 1rem;
+  color: green;
+}
+
+.wrapper{
+  background-color: #f1ecec;
+  border-radius: 10px;
+  height: 100vh;
+  width: 100%;
+}
+
+.container{
+  border-top: 1px solid rgb(46, 45, 45);
+  width: 100%;
+   display: flex;
+  align-items: center;
+}
+
+.imgContainer{
+width: 30%;
+}
+
+.img {
+  border-radius: 50%;
+margin: 1em;
+}
+
+.jobContainer{
+ display: grid;
+ color: #000;
+grid-template-columns: 1fr;
+grid-template-rows: repeat(2, 1fr);
+grid-column-gap: 10px;
+grid-row-gap: 10px;
+grid-template-areas: 
+"title"
+"desc";
+}
+
+
+.up {
+ grid-area: title;
+
+}
+
+.down{
+  grid-area: desc;
+
+}
+
+.clearBoth{
+  clear:both;
+}

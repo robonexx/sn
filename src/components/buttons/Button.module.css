@@ -1,0 +1,45 @@
+
+.btn {
+  padding: 12px 16px;
+  max-width: 18rem;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.125rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  text-align: center;
+  border: none;
+  border-radius: 5px;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.4s ease-in-out, color 0.4s ease-in-out;
+  outline: none;
+}
+
+.default {
+  border: none;
+  color: #fff;
+  background-color: #7B932E;
+
+  
+}
+
+.default:hover,
+.default:active {
+  background-color: darken(#7b932e, 10%);
+  cursor: pointer;
+}
+
+.dark {
+  border: none;
+  color: #fff;
+  background-color: #000;
+
+  
+}
+
+.dark:hover,
+.dark:active {
+  background-color: lighten(#000, 10%);
+  cursor: pointer;
+}
+
