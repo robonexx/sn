@@ -1,24 +1,32 @@
 
 .btn {
-  padding: 12px 16px;
-  max-width: 18rem;
-  font-family: "Montserrat", sans-serif;
-  font-size: 1.125rem;
-  font-weight: 600;
+  padding: 18px;
+  min-width: 18rem;
+  max-width: 80%;
   text-transform: uppercase;
   text-align: center;
   border: none;
-  border-radius: 5px;
   background: transparent;
   cursor: pointer;
   transition: all 0.4s ease-in-out, color 0.4s ease-in-out;
   outline: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* for icon */
+.btn span {
+align-self: flex-end;
+font-size: 1.5rem;
 }
 
 .default {
   border: none;
-  color: #fff;
-  background-color: #7B932E;
+  color: black;
+  background-color: #ffffff;
+  font-size: 0.75rem;
+  border-radius: 2px;
 
   
 }

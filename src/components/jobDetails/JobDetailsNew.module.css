@@ -9,6 +9,21 @@
 }
 
 
+.img {
+    position: relative;
+    width: 100%;  
+    height: 50svh;    
+    border-radius: 5px;                  
+}
+
+.img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 5px;      
+}
+
 .icons_wrapper {
     padding: 1rem 2rem;
     width: 100%;
@@ -20,24 +35,9 @@
     font-size: 20px;
 }
 
-.img {
-    position: relative;
-    width: 100%;  
-    height: 50svh;                  
-}
-
-.img img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
-      
-}
-
 .icons_wrapper svg {
-   /*  color: white; */
+    color: #000;
 }
-
 
 .info {
     margin: 2rem 0;

@@ -1,5 +1,8 @@
 .arrow_icon {
+    padding: 1rem 1.25rem;
     position: relative;
     font-size: 2rem;
-    color: #e3e3e3;
+    background-color: #fff;
+    /* border: 1px solid black; */
+    border-radius: 50%;
 }

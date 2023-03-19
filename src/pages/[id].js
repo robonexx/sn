@@ -3,7 +3,7 @@ import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import { useRouter } from 'next/router';
 import { jobData } from '@/data/jobs';
-import JobDetails from '@/components/jobDetails/JobDetails';
+import JobDetailsNew from '@/components/jobDetails/JobDetails';
 
 export default function DetailsPage() {
   const pathname = usePathname();
@@ -29,7 +29,7 @@ export default function DetailsPage() {
               <h2>{title}</h2>
               <h4>{subtitle}</h4>
               <p>{desc}</p> */}
-              <JobDetails
+              <JobDetailsNew
                 {...job}
               />
             </div>

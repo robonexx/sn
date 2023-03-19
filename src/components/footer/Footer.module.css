@@ -1,14 +1,76 @@
 .footerContainer {
   width: 100%;
-  position: relative;
-  bottom: 0;
+  position: absolute;
+  bottom: 0rem;
   left: 0;
   z-index: 100;
-  background-color: black;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  height: 8.25rem;
+  background-color: white;
+  display: block;
+  height: 5.5rem;
   gap: 29px;
+}
+
+.row {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  align-self: center;
+}
+
+.footerIcon1 {
+  position: relative;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.footerIcon2 {
+  position: relative;
+  font-size: 1.5rem;
+}
+
+.footerIcon2 > svg {
+  fill: gray;
+}
+
+.footerIcon3 {
+  position: relative;
+  font-size: 1.5rem;
+}
+
+.footerIcon3 > span {
+  position: absolute;
+  top: -2px;
+  right: -2px;
+  z-index: 2;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: 1px solid #fff;
+  background-color: #9EB45A;
+}
+
+.footerIcon3 > svg {
+  fill: gray;
+}
+
+.cardIcon {
+  position: absolute;
+  width: 16px;
+  height: 24px;
+  background-color: black;
+  border-radius: 5px;
+  border: 1px solid white;
+}
+
+.cardIcon:nth-last-of-type(2) {
+  position: absolute;
+  transform: translate(6px, -3px) rotate(10deg);
+  z-index: 2;
+  width: 16px;
+  height: 24px;
+  background-color: #000;
+  border-radius: 5px;
+  border: 1px solid white;
 }

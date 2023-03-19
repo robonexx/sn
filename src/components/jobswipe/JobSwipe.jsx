@@ -2,6 +2,7 @@ import React from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import useEmblaCarousel from 'embla-carousel-react'
+import { RiArrowRightLine, RiBookmarkFill } from 'react-icons/ri'
 
 // styles
 import styles from './JobSwipe.module.css'
@@ -11,7 +12,8 @@ const JobSwipe = ({data, options}) => {
   const [emblaRef] = useEmblaCarousel(options)
 
   return (
-      <div className={styles.embla}>
+    <div className={styles.embla}>
+      <RiBookmarkFill className={styles.saved}  />
           <div className={styles.embla__viewport} ref={emblaRef}>
               <div className={styles.embla__container}>
           {data.map(({title, subtitle, id, img}, idx) => (
@@ -28,7 +30,10 @@ const JobSwipe = ({data, options}) => {
                   <div className={styles.info}>
                     <h2>{title}</h2>
                     <h4>{subtitle}</h4>
-                </div>
+              </div>
+              <div className={styles.arrowIcon}>
+                <RiArrowRightLine />
+              </div>             
             </Link>
           ))}
         </div>

@@ -1,18 +1,36 @@
 .headerContainer {
+  padding: 2rem;
   width: 100%;
   position: absolute;
   top: 0;
   left: 0;
   z-index: 100;
   background-color: black;
+  background-color: #fff;
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  height: 88px;
+  height: 5.5rem;
   gap: 29px;
 }
 
-.headerIcon1 {
-  padding-left: 7.5rem;
+.row {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.headerIcon1 {  
+  color: black;
+  font-size: 1.4rem;
+  margin-right: 1rem;
+}
+
+.headerIcon2 {
+  border-radius: 50%;
+}
+
+.headerIcon2 img {
+  border-radius: 50%;
 }
