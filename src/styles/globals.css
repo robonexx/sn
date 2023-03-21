@@ -96,9 +96,8 @@ html, body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
-  background: #121212;
   color: #fff;
-  background: #fff;
+  background: #E1E1E1;
   color: #000;
   line-height: 1;
 }

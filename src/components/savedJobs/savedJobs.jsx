@@ -1,60 +1,49 @@
+
+import {useState, useEffect } from 'react'
 import Image from 'next/image';
 import styles from "../savedJobs/savedJobs.module.css"
-import HittaFlerJobb from '../hittaFlerJobb/HittaFlerJobb';
+import { MdWidthNormal } from 'react-icons/md';
 
 
 
-function Job(obj) {
+function SavedJobs() {
+  const [jobs, setJobs] = useState([])
 
-    const jobs = [
-    {
-      title: 'Skellefteå taxi',
-      desc: 'Taxichaufför',
-      id: 1,
-    img: `/images/image1.png`
-    },
-    {
-      title: 'Northvold',
-      desc: 'Gruppchef',
-      id: 2,
-    img: `/images/image2.png`
-    },
-    {
-      title: 'Skellefteå Lasarett',
-      desc: 'Sjuksköterska',
-      id: 3,
-      img: `/images/image3.png`
-    },
-    {
-      title: 'Skellefteå Kommun',
-      desc: 'Förskolepedagog',
-      id: 4,
-      img: `/images/image4.png`
-    },
-  ];
-
+  useEffect(() => {
+    const myjobs = JSON.parse(localStorage.getItem('myjobs'));
+    if (myjobs) {
+      setJobs(myjobs);
+    } else {
+        setJobs([])
+    }
+}, [])
+   
     return (
-      <>
       <div className={styles.wrapper}>
         <h2 className={styles.info}>sparade Jobb</h2>
-        {jobs.map((job) => (
+        {jobs.map((job, idx) => (
       
-            <div key={job.id} className={styles.container}>
+            <div key={idx} className={styles.container}>
                 <div className={styles.imgContainer}>
-                <Image src={job.img} alt={job.title} width={120} height={120} className={styles.img} />
+              <Image
+                src={job.img}
+                alt={job.employer}
+                fill
+                priority
+                className={styles.img} />
                 </div>
-            <div className={styles.jobContainer}>    
-              <h1 className={styles.up}>{job.title}</h1>
-              <p className={styles.down}>{job.desc}</p>
+            <div className={styles.jobContainer}> 
+            <p>Företag</p>  
+              <h2 className={styles.up}>{job.employer}</h2>
+              <p>Tjänst</p>
+              <p className={styles.down}>{job.role}</p>
             </div>
             <div className={styles.clearBoth}></div>
             </div>
         ))}
       </div>
-      <HittaFlerJobb />
-      </>
     )
 }
 
-export default Job;
+export default SavedJobs;
 

@@ -3,20 +3,13 @@ import Head from 'next/head';
 import styles from '@/styles/Home.module.css';
 import TopBar from '@/components/topbar/TopBar';
 import JobSwipe from '@/components/jobswipe/JobSwipe';
-import { jobData } from '@/data/jobs';
-import { RiBookmarkLine, RiCloseLine } from 'react-icons/ri';
+import { Jobs } from '@/data/jobsArray';
 import NewSwipe from '@/components/jobswipe/NewSwipe';
 
 const OPTIONS = { axis: 'y' };
 
 export default function Home() {
-  const doSomething = () => {
-    console.log('function to remove job from array goes here');
-  };
-
-  function handleSave() {
-    console.log('Function for saving job to db or localstorage, cookie etc');
-  }
+  
   return (
     <>
       <Head>
@@ -31,18 +24,9 @@ export default function Home() {
       <>
         <TopBar />
         {/* <Landing /> */}
-        <section className={styles.swipe_wrapper}>
+        <section className={styles.swipeWrapper}>
           {/* <JobSwipe options={OPTIONS} data={jobData} /> */}
-           <NewSwipe />
-
-          <div className={styles.icons_wrapper}>
-              <div className={styles.iconWrapper}>
-                <RiCloseLine onClick={() => doSomething()} />
-              </div>
-              <div className={styles.iconWrapper}>
-                <RiBookmarkLine onClick={() => handleSave()} />
-              </div>
-          </div>
+          <NewSwipe data={Jobs} />
         </section>
       </>
     </>

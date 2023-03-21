@@ -1,45 +1,40 @@
 .swipe {
     position: relative;
-    margin: 11vh auto 9.938rem;
-    width: 90vw;
-    max-width: 45rem;
-    height: 100svh;
-    max-height:60vh;
-    display: grid;
-    place-items: center center;
-    z-index: 1; 
+    margin: 0 auto;
+    width: 90svw;
+    max-width: 90vw;
+    height: 100%;
+    max-height: 67.5vh;    
+    display: flex;
+    flex-direction: column;
     border-radius: 10px;
-    box-shadow: rgba(0, 0, 0, 0.2) 0px 18px 50px -10px;
+    overflow: hidden;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
 }
 
 .swipe > .card {
-    margin: 0 auto;
-    width: 90svw;
-    max-width: 45rem;
-    height: 100vh;
-    max-height: 80svh;
-    max-height: calc(100vh - 20rem);
     position: absolute;
-    z-index: -1;        
+    top: 0;
+    width: 100%;
+    height: 58svh;
+    max-height: 100%;    
     color: #fff;
     display: grid;
     place-items: center center;
-    background-size: 100%;
-    background-position: center;
-    background-repeat: no-repeat;
-    object-fit: contain;
-    object-position: center;
-    border-radius: 20px;
-
+    border-radius: 10px;
 }
 
 .swipe .img {
     width: 100%;
-    height: 100%;
-    border-radius: 20px;
+    height: auto;
+   /*  border: 1rem solid rgb(247, 247, 247); */
+    border-radius: 10px;
+    object-fit: cover;
+    object-position: center;
+    filter: drop-shadow(0 4px 5px rgba(0,0,0,.325));
 }
 
-.swipe .card > p {
+.swipe > p {
     text-align: left;
     font-size: 1rem;
     font-weight: 400;
@@ -54,36 +49,92 @@
 .swipe .card .info {
     position: absolute;
     left: 0;
-    bottom: 10rem;
     left: 2rem;
     bottom: 4rem;
     z-index: 2;
-    text-align: center;
-    font-size: 28px;
-    font-weight: 700;    
+    text-align: center;  
   }
 
   .info {
     position: absolute;
     left: 2rem;
-    bottom: 2rem;
+    bottom: 4rem;
     z-index: 2;
     text-align: center;
   }
   
   .info > h2 {
       margin-bottom: 0.25rem;
-      padding: 0 0.25rem;
+      padding: 0.25 0;
       text-align: left;
       font-size: 1.125rem;
       font-weight: 600;
   }
 
   .info > h4 {
-    padding: 0 0.25rem;
     width: fit-content;
     border-radius: 2px;
     text-align: left;
     font-size: 1.125rem;
     font-weight: 400;
+}
+
+.arrowIcon {
+  padding: 1rem;
+  position: absolute;
+  z-index: 100;
+  right: 2rem;
+  top: 45vh;
+  display: grid;
+  place-content: center;  
+  color: #000;
+  font-size: 1.5rem;
+  background-color: #fff;
+  border-radius: 50%;  
+}
+
+.saved {
+  position: absolute;
+  top: -10px;
+  right: 3rem;
+  font-size: 1.5rem;
+  z-index: 1001;
+  color: #9EB45A;
+}
+
+.save {
+    position: absolute;
+    top: 20%;
+    left: 20%;
+    z-index: 100;
+    color: #9EB45A;
+    padding: 1rem;
+    background-color: black;
+    opacity: 0;
+}
+
+.throw {
+    position: absolute;
+    bottom: 20%;
+    left: 20%;
+    z-index: 100;
+    color: tomato;
+    padding: 1rem;
+    background-color: black;
+    opacity: 0;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+   /*  background-color: black; */
+    border: 1rem solid rgb(247, 247, 247);
+    border-radius: 10px;
+    pointer-events: none;
 }
